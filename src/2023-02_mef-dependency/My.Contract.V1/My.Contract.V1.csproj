@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>My.Contract</AssemblyName>
+    <RootNamespace>My</RootNamespace>
+    <Version>1.0.0</Version>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>strong-name-key.snk</AssemblyOriginatorKeyFile>
+    <Configurations>Debug</Configurations>
+  </PropertyGroup>
+
+</Project>

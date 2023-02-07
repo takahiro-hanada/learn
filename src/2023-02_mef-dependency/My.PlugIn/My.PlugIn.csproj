@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>V1;V2</Configurations>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <BaseOutputPath>bin</BaseOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='V2|AnyCPU'">
+    <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='V1|AnyCPU'">
+    <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\My.Contract.V1\My.Contract.V1.csproj" Condition="'$(Configuration)'=='V1'" />
+    <ProjectReference Include="..\My.Contract.V2\My.Contract.V2.csproj" Condition="'$(Configuration)'=='V2'" />
+  </ItemGroup>
+
+</Project>
