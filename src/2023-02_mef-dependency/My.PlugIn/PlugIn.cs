@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.Composition;
+﻿using System;
+using System.ComponentModel.Composition;
 
 namespace My
 {
-    [Export(typeof(IPlugIn))]
+    [Export(typeof(object))]
     public partial class PlugIn : IPlugIn
     {
-        public string Greet(string name) => $"Hello {name}";
+        public string Greet(string name) => $"Hello {name} (v1)";
     }
 }
