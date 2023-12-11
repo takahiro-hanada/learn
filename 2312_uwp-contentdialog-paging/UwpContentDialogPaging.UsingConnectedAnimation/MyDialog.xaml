@@ -33,13 +33,13 @@
         <ContentControl
             x:Name="ContentView"
             Grid.Row="1"
-            HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch"
             Content="{x:Bind ViewModel.PinnedItem, Mode=OneWay}"
             Visibility="Collapsed">
             <ContentControl.ContentTemplate>
                 <DataTemplate>
-                    <TextBlock FontSize="{ThemeResource TextStyleExtraLargeFontSize}" Text="{Binding Name}" />
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <TextBlock FontSize="{ThemeResource TextStyleExtraLargeFontSize}" Text="{Binding Name}" />
+                    </Grid>
                 </DataTemplate>
             </ContentControl.ContentTemplate>
         </ContentControl>

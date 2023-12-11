@@ -27,16 +27,34 @@ namespace UwpContentDialogPaging.UsingConnectedAnimation
 
             pinAnimation.TryStart(ContentView);
 
-            ContentView.Visibility = BackButton.Visibility = Visibility.Visible;
+            pinAnimation.Completed += PinAnimation_Completed;
 
-            ItemsView.Visibility = Visibility.Collapsed;
+            void PinAnimation_Completed(ConnectedAnimation _, object __)
+            {
+                pinAnimation.Completed -= PinAnimation_Completed;
+
+                ItemsView.Visibility = Visibility.Collapsed;
+            }
+
+            BackButton.Visibility = Visibility.Visible;
+
+            ContentView.Visibility = Visibility.Visible;
         }
 
         async void Button_Click(object sender, RoutedEventArgs e)
         {
             var animationService = ConnectedAnimationService.GetForCurrentView();
-
+            
             var pinnedAnimation = animationService.PrepareToAnimate("Pin", ContentView);
+
+            pinnedAnimation.Completed += PinAnimation_Completed;
+
+            void PinAnimation_Completed(ConnectedAnimation _, object __)
+            {
+                pinnedAnimation.Completed -= PinAnimation_Completed;
+
+                ContentView.Visibility = Visibility.Collapsed;
+            }
 
             await ItemsView.TryStartConnectedAnimationAsync(pinnedAnimation
                 , ViewModel.PinnedItem
@@ -45,9 +63,9 @@ namespace UwpContentDialogPaging.UsingConnectedAnimation
 
             ViewModel.PinnedItem = null;
 
-            ContentView.Visibility = BackButton.Visibility = Visibility.Collapsed;
-
             ItemsView.Visibility = Visibility.Visible;
+
+            BackButton.Visibility = Visibility.Collapsed;
         }
     }
 }
