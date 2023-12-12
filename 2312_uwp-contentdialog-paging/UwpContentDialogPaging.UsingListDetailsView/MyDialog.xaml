@@ -1,0 +1,41 @@
+﻿<ContentDialog
+    x:Class="UwpContentDialogPaging.UsingListDetailsView.MyDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Dialog Title"
+    mc:Ignorable="d">
+
+    <controls:ListDetailsView
+        x:Name="MyListDetails"
+        BackButtonBehavior="Inline"
+        ItemsSource="{x:Bind ViewModel.Items}"
+        ListHeader="[List State Header]"
+        SelectedItem="{x:Bind ViewModel.SelectedItem, Mode=TwoWay}">
+        <controls:ListDetailsView.DetailsHeader>
+            <StackPanel Spacing="8" Orientation="Horizontal">
+                <Button Click="Button_Click" Content="Manual Back" />
+                <TextBlock Text="[Details State Header]" VerticalAlignment="Center"/>
+            </StackPanel>
+        </controls:ListDetailsView.DetailsHeader>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding Name}" />
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        <controls:ListDetailsView.DetailsTemplate>
+            <DataTemplate>
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <TextBlock FontSize="{ThemeResource TextStyleExtraLargeFontSize}" Text="{Binding Name}" />
+                </Grid>
+            </DataTemplate>
+        </controls:ListDetailsView.DetailsTemplate>
+        <controls:ListDetailsView.NoSelectionContentTemplate>
+            <DataTemplate>
+                <TextBlock Text="Select item." />
+            </DataTemplate>
+        </controls:ListDetailsView.NoSelectionContentTemplate>
+    </controls:ListDetailsView>
+</ContentDialog>

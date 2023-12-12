@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpContentDialogPaging.UsingConnectedAnimation", "UwpContentDialogPaging.UsingConnectedAnimation\UwpContentDialogPaging.UsingConnectedAnimation.csproj", "{13028948-9C68-4B6C-9361-A58984AB1ABE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpContentDialogPaging.UsingListDetailsView", "UwpContentDialogPaging.UsingListDetailsView\UwpContentDialogPaging.UsingListDetailsView.csproj", "{3B73D239-8EEE-4A15-9363-DECF9F115592}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -41,6 +43,30 @@ Global
 		{13028948-9C68-4B6C-9361-A58984AB1ABE}.Release|x86.ActiveCfg = Release|x86
 		{13028948-9C68-4B6C-9361-A58984AB1ABE}.Release|x86.Build.0 = Release|x86
 		{13028948-9C68-4B6C-9361-A58984AB1ABE}.Release|x86.Deploy.0 = Release|x86
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|ARM.Build.0 = Debug|ARM
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|ARM.Deploy.0 = Debug|ARM
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|ARM64.Build.0 = Debug|ARM64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|x64.ActiveCfg = Debug|x64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|x64.Build.0 = Debug|x64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|x64.Deploy.0 = Debug|x64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|x86.ActiveCfg = Debug|x86
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|x86.Build.0 = Debug|x86
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Debug|x86.Deploy.0 = Debug|x86
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|ARM.ActiveCfg = Release|ARM
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|ARM.Build.0 = Release|ARM
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|ARM.Deploy.0 = Release|ARM
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|ARM64.ActiveCfg = Release|ARM64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|ARM64.Build.0 = Release|ARM64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|ARM64.Deploy.0 = Release|ARM64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|x64.ActiveCfg = Release|x64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|x64.Build.0 = Release|x64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|x64.Deploy.0 = Release|x64
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|x86.ActiveCfg = Release|x86
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|x86.Build.0 = Release|x86
+		{3B73D239-8EEE-4A15-9363-DECF9F115592}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
